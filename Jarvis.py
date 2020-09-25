@@ -73,6 +73,9 @@ if __name__ == "__main__":
 
         elif 'open facebook' in query:
             webbrowser.open('facebook.com')
+        
+        elif 'open linkedin' in query:
+            webbrowser.open('https://www.linkedin.com/')
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
