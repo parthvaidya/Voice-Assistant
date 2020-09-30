@@ -23,7 +23,7 @@ def wishMe():
     elif hour>=12 and hour<18:
         speak("Good Afternoon!")   
 
-    else:
+    elif hour>=18 and hour<=24:
         speak("Good Evening!")  
 
     speak("Hello sir my name is Jarvis. Please tell me how may I help you")     
@@ -73,6 +73,9 @@ if __name__ == "__main__":
 
         elif 'open facebook' in query:
             webbrowser.open('facebook.com')
+            
+        elif 'open linkedin' in query:
+            webbrowser.open('linkedin.com')
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
