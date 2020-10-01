@@ -1,5 +1,5 @@
-import pyttsx3 
-import speech_recognition as sr 
+import pyttsx3
+import speech_recognition as sr
 import datetime
 import wikipedia
 import webbrowser
@@ -21,15 +21,15 @@ def wishMe():
         speak("Good Morning!")
 
     elif hour>=12 and hour<18:
-        speak("Good Afternoon!")   
+        speak("Good Afternoon!")
 
     else:
-        speak("Good Evening!")  
+        speak("Good Evening!")
 
-    speak("Hello sir my name is Jarvis. Please tell me how may I help you")     
+    speak("Hello sir my name is Jarvis. Please tell me how may I help you")
 
 def takeCommand():
-    
+
 
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -38,13 +38,13 @@ def takeCommand():
         audio = r.listen(source)
 
     try:
-        print("Recognizing...")    
+        print("Recognizing...")
         query = r.recognize_google(audio, language='en-in')
         print(f"User said: {query}\n")
 
     except Exception as e:
-            
-        print("Say that again please...")  
+
+        print("Say that again please...")
         return "None"
     return query
 
@@ -67,18 +67,21 @@ if __name__ == "__main__":
 
         elif 'open youtube' in query:
             webbrowser.open('youtube.com')
-        
+
         elif 'open google' in query:
             webbrowser.open('google.com')
 
         elif 'open facebook' in query:
             webbrowser.open('facebook.com')
-        
+
         elif 'open linkedin' in query:
             webbrowser.open('https://www.linkedin.com/')
+
+        elif 'open twitter' in query:
+            webbrowser.open('https://www.twitter.com/')
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
 
-        
+
