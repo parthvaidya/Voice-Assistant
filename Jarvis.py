@@ -76,6 +76,9 @@ if __name__ == "__main__":
             
         elif 'open linkedin' in query:
             webbrowser.open('linkedin.com')
+            
+        elif 'open gmail' in query:
+            webbrowser.open("gmail.com")
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
